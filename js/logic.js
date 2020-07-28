@@ -29,10 +29,15 @@ document.addEventListener("click", function (e) {
     }
 
     if (stackCount < 10) {
+      let stackId = `stack-${stackCount}`;
       panel_content.innerHTML +=
-        "<input type='text' id='stack-"+stackCount+"' value='test..." + stackCount + "' /><br/>";
+        "<div id='"+stackId+"'><input type='text' value='test..." + stackCount + "' /><a href='javascript:deleteElement("+'"'+stackId+'"'+")'>delete</a></div><br/>";
       stackCount++;
       console.log(stackCount);
     }
   }
 });
+function deleteElement(elementId){
+  console.log(elementId);
+  document.querySelector('#'+elementId).remove();
+}
