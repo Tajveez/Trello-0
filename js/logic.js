@@ -1,3 +1,40 @@
+//* Trello Master Object
+let dataObj = {
+  userName: 'Adam',
+  darkMode: 'off',
+  panelsCount: 1,
+  panels:
+  [
+    {
+      id: 1,
+      stackCount: 1,
+      color: '#ffff',
+      createdAt: '01-01-1970',
+      position: '1',
+      stacks: [
+        {
+          id: 1,
+          text: 'lorem ipsm',
+          status: '',
+          color: '',
+          position: '',
+          createdAt: '',
+        },
+        {
+          id: 2,
+          text: 'lorem ipsm',
+          status: '',
+          color: '',
+          position: '',
+          createdAt: '',
+        }
+      ]
+    }
+  ]
+};
+
+renderElements(dataObj);
+// console.log(dataObj);
 let addPanel = document.getElementById("add_panel");
 let panelCount = 0;
 let panel = document.querySelector(".panel");
@@ -37,7 +74,19 @@ document.addEventListener("click", function (e) {
     }
   }
 });
+
 function deleteElement(elementId){
   console.log(elementId);
   document.querySelector('#'+elementId).remove();
+}
+
+//Render element
+function renderElements(object){
+  if(object['panels'] !== 'undefined' && object['panels'].length > 0){
+    console.log(object['panels']);
+
+    for(ob of object['panels']){
+      console.log(ob);
+    }
+  }
 }
