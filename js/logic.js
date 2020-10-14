@@ -34,7 +34,7 @@ let dataObj = {
 };
 
 renderElements(dataObj);
-// console.log(dataObj);
+ 
 let addPanel = document.getElementById("add_panel");
 let panelCount = 0;
 let panel = document.querySelector(".panel");
@@ -90,3 +90,5 @@ function renderElements(object){
     }
   }
 }
+
+// git add . && git commit -m "Code update" && git push origin master
