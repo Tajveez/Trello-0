@@ -86,7 +86,7 @@ function renderElements(object){
     console.log(object['panels']);
 
     for(ob of object['panels']){
-      console.log(ob);
+      console.log('>>> ',ob);
     }
   }
 }
